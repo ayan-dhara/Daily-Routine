@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/widgetRelativeLayout"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center"
+	android:paddingTop="0dp"
+	android:background="#33000000">
+
+	<TextView
+		android:id="@+id/widgetTextView1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:ellipsize="marquee"
+		android:gravity="center|center_vertical|center_horizontal"
+		android:paddingTop="10dp"
+		android:shadowDx="10"
+		android:shadowDy="10"
+		android:text="Please wait.&#10;Loading..."
+		android:textColor="#FFFFFF"
+		android:textIsSelectable="true"
+		android:textSize="15sp" />
+
+</RelativeLayout>
+

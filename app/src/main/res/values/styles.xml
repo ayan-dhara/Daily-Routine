@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+		<item name="android:colorPrimary">#ffffff</item>
+        <item name="android:colorPrimaryDark">#0090ff</item>
+        <item name="android:colorAccent">#00aaff</item>
+        <item name="android:colorControlHighlight">#0080ff</item>
+        <item name="android:colorControlNormal">#0100aaff</item>
+		<item name="android:colorButtonNormal">#00aaff</item>
+		<!--item name="android:background">#ffffff</item-->
+		<!--item name="android:fontFamily">cursive</item-->
+	</style>
+	<style name="TextViewStyle" parent="@android:style/Theme.Material.Light.NoActionBar">
+		<item name="android:shadowDx">2</item>
+		<item name="android:shadowDy">2</item>
+		<item name="android:shadowRadius">2</item>
+		<item name="android:shadowColor">#000000</item>
+	</style>
+</resources>

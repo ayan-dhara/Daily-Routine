@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ad.app.routine" >
+    <uses-permission android:name="android.permission.BROADCAST_SMS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="true"
+        android:label="Routine">
+        <activity
+            android:name=".LauncherActivity"
+            android:theme="@style/AppTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BackupActivity"
+            android:label="Routine Backup"
+            android:theme="@style/AppTheme"
+            android:excludeFromRecents="true"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="file"/>
+                <data android:scheme="content"/>
+                <data android:mimeType="application/x-kchart"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity2"/>
+        <service android:name=".MainService"/>
+<!--        <service android:name=".WidgetService"/>-->
+<!--        <receiver android:name=".WidgetService"/>-->
+        <receiver
+            android:name=".Widget3"
+            android:label="Routine3"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget3_resource"/>
+        </receiver>
+        <receiver
+            android:name=".Widget2"
+            android:label="Routine2"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget2_resource"/>
+        </receiver>
+        <receiver
+            android:name=".Widget"
+            android:label="Routine1"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_resource"/>
+        </receiver>
+    </application>
+</manifest>
